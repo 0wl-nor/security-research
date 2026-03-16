@@ -1,17 +1,20 @@
 # SQL Injection
 
 ## 概要
-ログインフォームや検索フォームでのSQLインジェクションを検証。
+SQL injectionの基本的な検証と攻撃パターンの研究
+
+## 対象
+DVWA
+自作テストWebアプリ
 
 ## 使用ツール
 - Burp Suite
 - sqlmap
 
-## 攻撃手順
-1. ログインフォームにアクセス
-2. `' OR 1=1 --` 等を入力してログイン
-3. 結果を確認
+## 内容
+- Error Based
+- Union Based
+- Blind SQL Injection
 
-## 学び
-- エラーメッセージから情報漏洩の危険性を確認
-- Prepared Statement で防御可能
+## 詳細
+experiment.mdを参照
