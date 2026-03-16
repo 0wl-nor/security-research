@@ -4,8 +4,8 @@
 SQL injectionの基本的な検証と攻撃パターンの研究
 
 ## 対象
-DVWA
-自作テストWebアプリ
+- DVWA
+- 自作テストWebアプリ
 
 ## 使用ツール
 - Burp Suite
