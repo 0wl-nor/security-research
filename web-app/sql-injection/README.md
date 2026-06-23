@@ -1,11 +1,12 @@
 # SQL Injection
 
+SQLインジェクションの基本原理と検証方法
+
 ## 概要
 SQL injectionの基本的な検証と攻撃パターンの研究
 
 ## 対象
 - DVWA
-- 自作テストアプリ
 
 ## 使用ツール
 - Burp Suite
