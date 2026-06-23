@@ -1,21 +1,65 @@
 # SQL Injection
 
-SQLインジェクションの基本原理と検証方法
+SQL Injection は、ユーザー入力が適切に検証されず SQL クエリに組み込まれることで発生する脆弱性。
 
-## 概要
-SQL injectionの基本的な検証と攻撃パターンの研究
+---
 
-## 対象
-- DVWA
+## Category
 
-## 使用ツール
-- Burp Suite
-- sqlmap
+Web Application Security
 
-## 内容
-- Error Based
-- Union Based
-- Blind SQL Injection
+---
 
-## 詳細
-experiment.mdを参照
+## Overview
+
+攻撃者は入力フォームやURLパラメータへSQL文を注入し、データベース操作を行うことができる。
+
+影響例
+
+・認証回避
+・情報漏洩
+・データ改ざん
+・データ削除
+
+---
+
+## Example
+
+入力
+
+```sql
+' OR '1'='1
+```
+
+脆弱なクエリ
+
+```sql
+SELECT * FROM users
+WHERE username = '$user'
+AND password = '$pass';
+```
+
+---
+
+## Detection
+
+・エラーメッセージの確認
+・Burp Suite によるパラメータ改変
+・SQLMap による検証
+
+---
+
+## Mitigation
+
+・Prepared Statement
+・Parameterized Query
+・入力値検証
+・最小権限の原則
+
+---
+
+## Lab
+
+・DVWA
+・OWASP Juice Shop
+
